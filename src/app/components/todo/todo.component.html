@@ -1,0 +1,12 @@
+<p>Todo List</p>
+<div class="form-group" [formGroup]="todoForm">
+  <input type="text" class="form-control" formControlName="newTodo" placeholder="Add a new todo">
+  <button class="btn btn-primary" (click)="addTodo()" [disabled]="todoForm.invalid">Add Todo</button>
+</div>
+
+<ul class="list-group">
+  <li *ngFor="let todo of todos; let i = index" class="list-group-item" [ngClass]="{'afterClicked': i === highlightedIndex}" (click)="toggleHighlight(i)" [appHighlight]="lastAddedIndex === i">
+    {{ todo }}
+  </li>
+</ul>
+

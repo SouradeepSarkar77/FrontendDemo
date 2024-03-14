@@ -1,0 +1,9 @@
+<p>Post List</p>
+<div class="card m-2" *ngFor="let plInfo of postListData" appBoldWord="architecto">
+  <div class="card-header">
+    {{plInfo.title}}
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{plInfo.body}}</li>
+  </ul>
+</div>

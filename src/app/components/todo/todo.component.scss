@@ -1,0 +1,20 @@
+/* todo.component.css */
+
+.highlighted {
+  animation: fadeHighlight 3.5s ease-in-out;
+}
+
+@keyframes fadeHighlight {
+  0% {
+    background-color: yellow;
+    opacity: 0;
+  }
+  100% {
+    background-color: transparent;
+    opacity: 1;
+  }
+}
+
+.afterClicked {
+  background-color: pink;
+}
